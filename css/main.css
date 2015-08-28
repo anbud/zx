@@ -1,0 +1,279 @@
+/*
+ *  ZX blog
+ * 
+ *  Copyright (C) 2013-2015 - Andrej Budinčević
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+ 
+/* fonts ================================================================ */
+
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v13/e7MeVAyvogMqFwwl61PKhPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v13/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v13/Pru33qjShpZSmG3z6VYwnVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(http://fonts.gstatic.com/s/roboto/v13/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* style ================================================================ */
+
+@-webkit-keyframes rotate { from { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
+
+*, html, body { -webkit-font-smoothing: antialiased; }
+
+a { color: #c8c8c8; text-decoration: none; }
+a:hover { color: #f30d4d; text-decoration: none; }
+
+html { 
+	height: 100%;
+}
+
+body { font-family: "Roboto", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif; background: #272727; padding: 0; margin: 0; position: relative; font-size: 14px; height:100%; min-height: 100%; color: #c8c8c8;}
+
+
+/* header ================================================================ */
+
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    position: relative;
+}
+
+header { 
+	display: block; 
+	width: 240px; 
+	height: 80px; 
+	line-height: 40px; 
+	color: #c8c8c8; 
+	text-decoration: none; 
+	font-size: 72px; 
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	font-weight: 100;
+	z-index: 9999;
+	background-color: #000;
+}
+
+header .logo {
+	display: block;
+	margin-top: 15px;
+}
+
+header .sub {
+	left: 21px;
+	top: 40px;
+	position: absolute;
+}
+
+header .blue {
+	color: #006699 !important;  
+}
+
+header .desc-top {
+	font-size: 36px;
+	display: block;
+	margin-left: 70px;
+	margin-top: -55px;
+}
+
+header .desc-bot {
+	font-size: 36px;
+	display: block;
+	margin-left: 160px;
+	margin-top: -5px;
+}
+
+header .logo:hover {
+	color: #c8c8c8; 
+}
+
+/* sidebar ================================================================ */
+#sidebar { 
+	position: fixed; 
+	padding: 0; 
+	margin: 0; 
+	font-size: 11px; 
+	width: 260px; 
+	top: 0; 
+	left: 0; 
+	background-color: #171717; 
+	color: #ababab; 
+	height: 100%; 
+}
+
+#sidebar .blue {
+	color: #006699 !important;  
+}
+
+#sidebar h3 { 
+	clear: both; 
+	padding: 25px 20px 20px 20px;  
+	font-size: 24px; 
+	font-weight: 300; 
+	color: #ababab;
+	margin-top: 90px; 
+	margin-bottom: 0; 
+	border-bottom: 1px #1a1a1a solid;
+}
+
+#sidebar h3.about {
+	margin-top: 0px !important; 
+}
+
+#sidebar .post {
+	display: block;
+	padding: 10px;
+	font-size: 12px;
+	border-bottom: 1px #1a1a1a solid;
+}
+
+#sidebar .post:hover {
+	background-color: #131313;
+}
+
+#sidebar a { 
+	color: #ababab; 
+}
+
+#sidebar a:hover {
+	color: #006699;
+	text-decoration: none;
+}
+
+#sidebar #posts {
+  list-style: none;
+  list-style-type: none;
+  margin: 0; 
+  margin-left: -40px; 
+}
+
+/* content ================================================================ */
+#content { 
+	position: absolute; 
+	top: 0; 
+	left: 270px;
+	width: calc(100% - 300px);
+	padding: 1em;
+	background-image: linear-gradient(to top, rgba(39,39,39,1),rgba(39,39,39,0));
+	background-repeat: repeat-x;
+}
+
+#content .post {
+	display: block;
+	padding: 2em;
+	background-color: #171717;
+	border-radius: 5px;
+	color: #c8c8c8;
+	font-size: 13px;
+	margin-bottom: 15px;
+}
+
+#content h2 {
+	margin-top: 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #3f3f3f;
+}
+
+#content pre {
+	font-family: Roboto;
+}
+
+#content a { 
+	color: #e6efee; 
+}
+
+#content .comment {
+	margin: 0px;
+	width: 90%;
+	height: 50px;
+	padding: 10px;
+	border: 1px solid #3f3f3f;
+	background-color: #171717;
+}
+
+#content .button {
+	float: right;
+	width: 100px;
+	height: 72px;
+	background-color: #171717;
+	border: 1px solid #3f3f3f;
+}
+
+#content .share {
+	border-top: 1px solid #3f3f3f;
+	padding: 10px;
+	text-align: right;
+}
+
+#content .blue {
+	color: #006699 !important;  
+}
+
+#content .pagination {
+	color: #c8c8c8;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+#content .pagination a {
+	padding: 10px;
+	background-color: #171717;
+	border-radius: 5px;
+	margin-left: 4px;
+	width: 15px;
+	display: inline-block;
+}
+
+#content .pagination a:hover {
+	color: #006699;
+	text-decoration: none;
+	background-color: #131313;
+}
+
+#content .pagination a.active {
+	color: #006699;
+	text-decoration: none;
+	background-color: #131313;
+}
